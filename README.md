@@ -1,2 +1,2 @@
 # Java
-CSA0902- programming with java
+CSA0902-Programming in java for Graphics
