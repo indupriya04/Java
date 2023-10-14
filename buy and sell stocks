@@ -1,5 +1,5 @@
 class BuyAndsell{
-	static int maxProfit(int prices[], int n)
+	static int Profit(int prices[], int n)
 	{
 		int buy = prices[0], max_profit = 0;
 		for (int i = 1; i < n; i++) {
@@ -14,7 +14,7 @@ class BuyAndsell{
 	{
 		int prices[] = { 7, 1, 5, 6, 4 };
 		int n = prices.length;
-		int max_profit = maxProfit(prices, n);
+		int max_profit = Profit(prices, n);
 		System.out.println("maximum profit="+max_profit);
 	}
 }
