@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class StringToInt {
+    public static void main(String[] args) {
+        Scanner in= new Scanner(System.in);
+        System.out.print("Enter a number as a string: ");
+        String str = in.nextLine();
+        int num = Integer.parseInt(str);
+        System.out.println("Converted integer: " + num);
+        in.close();
+    }
+}
