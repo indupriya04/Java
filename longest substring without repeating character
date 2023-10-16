@@ -1,0 +1,32 @@
+class R192110486{
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                if (checkRepetition(s, i, j)) {
+                    res = Math.max(res, j - i + 1);
+                }
+            }
+        }
+        return res;
+    }
+    private boolean checkRepetition(String s, int start, int end) {
+        int[] chars = new int[128];
+        for (int i = start; i <= end; i++) {
+            char c = s.charAt(i);
+            chars[c]++;
+            if (chars[c] > 1) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String args[]) {
+        R192110486 in = new R192110486();
+        String s = "abcabcbb";
+        System.out.println("given string="+s);
+        System.out.println("length of longest substring without repeating char=");
+        System.out.println(in.lengthOfLongestSubstring(s));
+    }
+}
