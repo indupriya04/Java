@@ -8,7 +8,7 @@ public class R192110486{
       int arr[]=new int[n];
       System.out.println("Enter the elements of the array ");
       for(i=0; i<n ;i++) {
-          arr[i]=sc.nextInt();
+          arr[i]=in.nextInt();
       }
       sum=(n+1)*(n+2)/2;
       for(i=0;i<n;i++)
