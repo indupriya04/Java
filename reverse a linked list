@@ -1,0 +1,14 @@
+import java.util.*;
+class R192110486 {
+    public static void main(String[] args){
+        LinkedList<Integer> list = new LinkedList<Integer>();
+        list.add(3);
+        list.add(25);
+        list.add(14);
+        list.add(16);
+        list.add(9);
+        System.out.println("Original linked list: " + list);
+        Collections.reverse(list);
+        System.out.println("Reversed linked list: " + list);
+    }
+}
