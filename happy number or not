@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class R192110486{   
+    public static int HappyNum(int n){  
+        int rem = 0, sum = 0;
+        while(n>0){  
+            rem=n%10;  
+            sum=sum+(rem*rem);  
+            n=n/10;  
+        }  
+        return sum;  
+    }  
+    public static void main(String[] args) {  
+        int n,result;
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter a number=");
+        n=in.nextInt();
+        result=n ;  
+        while(result!=1 && result!=4){  
+            result=HappyNum(result);  
+        }  
+        if(result==1)  
+            System.out.println(n+ " is a happy number"); 
+        else if(result==4)  
+            System.out.println(n+ " is not a happy number");     
+    }  
+}  
