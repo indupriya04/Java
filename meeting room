@@ -1,0 +1,26 @@
+import java.util.*;
+class Meeting{
+    int start,end;
+    Meeting(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
+}
+class R192110486{
+    public static boolean canAttendAllMeetings(List<Meeting> meetings) {
+        Collections.sort(meetings, Comparator.comparingInt(m -> m.end));
+        for (int i = 1; i < meetings.size(); i++) {
+            if (meetings.get(i).start < meetings.get(i - 1).end) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        List<Meeting> meetings = new ArrayList<>();
+        meetings.add(new Meeting(7, 10));
+        meetings.add(new Meeting(2, 4));
+        boolean canAttend = canAttendAllMeetings(meetings);
+        System.out.println(canAttend);
+    }
+}
