@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class R192110486{
+  public static void main(String args[]){
+    Scanner in= new Scanner(System.in);
+    System.out.print("Enter a string: ");  
+    String str1= in.nextLine();
+    System.out.print("Enter a string: ");  
+    String str2= in.nextLine();
+    int n=str1.indexOf(str2);
+    System.out.println("frist occurence at index "+n);
+  }
+}
