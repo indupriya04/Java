@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args) throws Exception {
+    Scanner scn = new Scanner(System.in);
+    System.out.println("enter no.of rows=");
+    int n = scn.nextInt();
+    System.out.println("enter no.of columns=");
+    int m = scn.nextInt();
+    int[][] arr = new int[n][m];
+    System.out.println("enter matrix values=");
+    for (int row = 0; row < n; row++) {
+      for (int col = 0; col < m; col++) {
+        arr[row][col] = scn.nextInt();
+      }
+    }
+    System.out.println("enter element to find=");
+    int data = scn.nextInt();
+    scn.close();
+    System.out.println("output=");
+    for (int row = 0; row < n; row++) {
+      for (int col =0; col < m; col++) {
+        if (arr[row][col] == data) {
+          System.out.println("true");
+          return;
+        }
+      }
+    }
+    System.out.println("Not Found");
+  }
+}
