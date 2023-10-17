@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.LinkedList;
 class R192110486 {
     public static void main(String[] args){
         LinkedList<Integer> list = new LinkedList<Integer>();
