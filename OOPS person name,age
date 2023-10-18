@@ -1,0 +1,16 @@
+public class R192110486{
+    private String name;
+    private int age;
+    public R192110486(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public void printInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+    public static void main(String[] args) {
+        R192110486 person1 = new R192110486("Indu", 19);
+        person1.printInfo();
+    }
+}
