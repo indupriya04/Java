@@ -1,0 +1,19 @@
+import java.util.HashSet;
+public class HashSetExample {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+        set.add("apple");
+        set.add("banana");
+        set.add("cherry");
+        set.add("date");
+        set.add("fig");
+        String elementToRemove = "banana";
+        HashSet<String> newSet = new HashSet<>();
+        for (String element : set) {
+            if (!element.equals(elementToRemove)) {
+                newSet.add(element);
+            }
+        }
+        System.out.println("Updated set: " + newSet);
+    }
+}
