@@ -1,8 +1,8 @@
-public class Car {
+public class R192110486{
     private String make;
     private String model;
     private int year;
-    public Car(String make, String model, int year) {
+    public R192110486(String make, String model, int year) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -13,7 +13,7 @@ public class Car {
         System.out.println("Year: " + year);
     }
     public static void main(String[] args) {
-        Car myCar = new Car("Toyota", "Camry", 2020);
+        R192110486 myCar = new R192110486("Toyota", "Camry", 2020);
         myCar.printCarDetails();
     }
 }
