@@ -1,0 +1,50 @@
+class Vehicle {
+    String make;
+    String model;
+    public Vehicle(String make, String model) {
+        this.make = make;
+        this.model = model;
+    }
+    public void rent() {
+        System.out.println("Renting " + make + " " + model);
+    }
+    public void returnVehicle() {
+        System.out.println("Returning " + make + " " + model);
+    }
+}
+class Sedan extends Vehicle {
+    int numSeats;
+    public Sedan(String make, String model, int numSeats) {
+        super(make, model);
+        this.numSeats = numSeats;
+    }
+    public void displayInfo() {
+        System.out.println(make + " " + model + " - Sedan, " + numSeats + " seats");
+    }
+}
+class SUV extends Vehicle {
+    boolean offRoadCapable;
+    public SUV(String make, String model, boolean offRoadCapable) {
+        super(make, model);
+        this.offRoadCapable = offRoadCapable;
+    }
+    public void displayInfo() {
+        String offRoad = offRoadCapable ? "Off-road Capable" : "Not Off-road Capable";
+        System.out.println(make + " " + model + " - SUV, " + offRoad);
+    }
+}
+class R192110486{
+    public static void main(String[] args) {
+        Sedan sedan = new Sedan("Toyota", "Camry", 5);
+        SUV suv = new SUV("Jeep", "Wrangler", true);
+        sedan.displayInfo();
+        sedan.rent();
+        sedan.returnVehicle();
+
+        System.out.println();
+
+        suv.displayInfo();
+        suv.rent();
+        suv.returnVehicle();
+    }
+}
