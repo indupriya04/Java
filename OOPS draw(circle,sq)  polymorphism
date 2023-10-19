@@ -11,7 +11,7 @@ class Square implements Drawable {
         System.out.println("Drawing a Square");
     }
 }
-class Main {
+class R192110486{
     public static void main(String[] args) {
         Drawable[] shapes = new Drawable[2];
         shapes[0] = new Circle();
