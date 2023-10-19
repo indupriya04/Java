@@ -1,0 +1,41 @@
+class Game {
+    String title;
+    String genre;
+    public Game(String title, String genre) {
+        this.title = title;
+        this.genre = genre;
+    }
+    public void startGame() {
+        System.out.println("Starting " + title + "...");
+    }
+}
+class ActionGame extends Game {
+    int numberOfPlayers;
+    public ActionGame(String title, int numberOfPlayers) {
+        super(title, "Action");
+        this.numberOfPlayers = numberOfPlayers;
+    }
+    public void performAction() {
+        System.out.println("Performing action in " + title + "...");
+    }
+}
+class PuzzleGame extends Game {
+    int difficultyLevel;
+    public PuzzleGame(String title, int difficultyLevel) {
+        super(title, "Puzzle");
+        this.difficultyLevel = difficultyLevel;
+    }
+    public void solvePuzzle() {
+        System.out.println("Solving puzzle in " + title + "...");
+    }
+}
+class R192110486{
+    public static void main(String[] args) {
+        ActionGame actionGame = new ActionGame("Call of Duty", 4);
+        actionGame.startGame();
+        actionGame.performAction();
+        PuzzleGame puzzleGame = new PuzzleGame("Sudoku", 3);
+        puzzleGame.startGame();
+        puzzleGame.solvePuzzle();
+    }
+}
