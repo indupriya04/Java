@@ -1,0 +1,51 @@
+class Menu {
+    String name;
+    double price;
+    public Menu(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Price: $" + price);
+    }
+}
+class Appetizer extends Menu {
+    String type;
+    public Appetizer(String name, double price, String type) {
+        super(name, price);
+        this.type = type;
+    }
+    public void display() {
+        super.display();
+        System.out.println("Type: " + type);
+    }
+    public void serve() {
+        System.out.println("Serving " + name + " as an appetizer.");
+    }
+}
+class Entree extends Menu {
+    String cuisine;
+    public Entree(String name, double price, String cuisine) {
+        super(name, price);
+        this.cuisine = cuisine;
+    }
+    public void display() {
+        super.display();
+        System.out.println("Cuisine: " + cuisine);
+    }
+    public void serve() {
+        System.out.println("Serving " + name + " as an entree.");
+    }
+}
+class R192110486{
+    public static void main(String[] args) {
+        Appetizer appetizer = new Appetizer("Salad", 7.99, "Vegetarian");
+        appetizer.display();
+        appetizer.serve();
+        System.out.println();
+        Entree entree = new Entree("Chicken Alfredo", 12.99, "Italian");
+        entree.display();
+        entree.serve();
+    }
+}
