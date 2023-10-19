@@ -1,0 +1,56 @@
+class Forecast {
+    private String date;
+    private double temperature;
+
+    public Forecast(String date, double temperature) {
+        this.date = date;
+        this.temperature = temperature;
+    }
+    public String getDate() {
+        return date;
+    }
+    public double getTemperature() {
+        return temperature;
+    }
+    public void predictWeather() {
+        System.out.println("Basic weather prediction.");
+    }
+}
+class SunnyForecast extends Forecast {
+    private int uvIndex;
+    public SunnyForecast(String date, double temperature, int uvIndex) {
+        super(date, temperature);
+        this.uvIndex = uvIndex;
+    }
+    public int getUvIndex() {
+        return uvIndex;
+    }
+    public void predictWeather() {
+        System.out.println("Sunny with a UV index of " + uvIndex);
+    }
+}
+class RainyForecast extends Forecast {
+    private double precipitation;
+    public RainyForecast(String date, double temperature, double precipitation) {
+        super(date, temperature);
+        this.precipitation = precipitation;
+    }
+    public double getPrecipitation() {
+        return precipitation;
+    }
+    public void predictWeather() {
+        System.out.println("Rainy with " + precipitation + "mm precipitation");
+    }
+}
+class WeatherForecastingSystem {
+    public static void main(String[] args) {
+        Forecast basicForecast = new Forecast("2023-10-19", 25.0);
+        basicForecast.predictWeather();
+
+        SunnyForecast sunnyForecast = new SunnyForecast("2023-10-20", 30.0, 8);
+        sunnyForecast.predictWeather();
+
+        RainyForecast rainyForecast = new RainyForecast("2023-10-21", 20.0, 5.0);
+        rainyForecast.predictWeather();
+    }
+}
