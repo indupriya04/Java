@@ -1,0 +1,36 @@
+class Person {
+    String name;
+    int age;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+class Student extends Person {
+    int studentId;
+    public Student(String name, int age, int studentId) {
+        super(name, age);
+        this.studentId = studentId;
+    }
+    public void manageCoursework() {
+        System.out.println(name + " is managing coursework.");
+    }
+}
+class Professor extends Person {
+    String department;
+    public Professor(String name, int age, String department) {
+        super(name, age);
+        this.department = department;
+    }
+    public void teachClass() {
+        System.out.println(name + " is teaching a class in the " + department + " department.");
+    }
+}
+class R192110486{
+    public static void main(String[] args) {
+        Student student = new Student("John Doe", 20, 123456);
+        Professor professor = new Professor("Dr. Smith", 40, "Computer Science");
+        student.manageCoursework();
+        professor.teachClass();
+    }
+}
