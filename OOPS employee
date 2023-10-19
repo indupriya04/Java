@@ -1,0 +1,69 @@
+class Employee {
+    private String name;
+    private int id;
+    private double salary;
+    public Employee(String name, int id, double salary) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getId() {
+        return id;
+    }
+    public double getSalary() {
+        return salary;
+    }
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+        System.out.println("Salary: $" + salary);
+    }
+}
+class Manager extends Employee {
+    private String department;
+    public Manager(String name, int id, double salary, String department) {
+        super(name, id, salary);
+        this.department = department;
+    }
+    public String getDepartment() {
+        return department;
+    }
+    public void manageTeam() {
+        System.out.println(getName() + " is managing the " + department + " team.");
+    }
+}
+class SalesPerson extends Employee {
+    private double commission;
+    public SalesPerson(String name, int id, double salary, double commission) {
+        super(name, id, salary);
+        this.commission = commission;
+    }
+    public double getCommission() {
+        return commission;
+    }
+    public void makeSale(double saleAmount) {
+        double totalSalary = getSalary() + (commission * saleAmount);
+        System.out.println(getName() + " made a sale of $" + saleAmount + ". Total Salary: $" + totalSalary);
+    }
+}
+
+public class R192110486{
+    public static void main(String[] args) {
+        Employee employee1 = new Employee("John Doe", 101, 50000.0);
+        Manager manager1 = new Manager("Jane Smith", 201, 70000.0, "IT");
+        SalesPerson salesPerson1 = new SalesPerson("Bob Johnson", 301, 60000.0, 0.1);
+
+        employee1.displayDetails();
+        System.out.println();
+
+        manager1.displayDetails();
+        manager1.manageTeam();
+        System.out.println();
+
+        salesPerson1.displayDetails();
+        salesPerson1.makeSale(10000.0);
+    }
+}
