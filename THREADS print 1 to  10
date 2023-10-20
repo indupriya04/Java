@@ -1,0 +1,12 @@
+class OneTo10 extends Thread{
+ public void run() {
+  for(int i=1; i<=10; i++) {
+   System.out.println(i);
+  }
+ }
+}
+public class R192110486{
+ public static void main(String[] args) {
+  new OneTo10().start();
+ }
+}
